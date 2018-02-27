@@ -12,7 +12,7 @@
 		9030D61A1FFC251800B96530 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9030D6181FFC251800B96530 /* Main.storyboard */; };
 		9030D61C1FFC251800B96530 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9030D61B1FFC251800B96530 /* Assets.xcassets */; };
 		9030D61F1FFC251800B96530 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9030D61D1FFC251800B96530 /* LaunchScreen.storyboard */; };
-		9098E77B1FFD35B20077FAE6 /* CurrencyTextFiel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9098E77A1FFD35B20077FAE6 /* CurrencyTextFiel.swift */; };
+		9098E77B1FFD35B20077FAE6 /* CurrencyTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9098E77A1FFD35B20077FAE6 /* CurrencyTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,7 +23,7 @@
 		9030D61B1FFC251800B96530 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9030D61E1FFC251800B96530 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9030D6201FFC251800B96530 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9098E77A1FFD35B20077FAE6 /* CurrencyTextFiel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyTextFiel.swift; sourceTree = "<group>"; };
+		9098E77A1FFD35B20077FAE6 /* CurrencyTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,7 +78,7 @@
 		9098E7781FFD34870077FAE6 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				9098E77A1FFD35B20077FAE6 /* CurrencyTextFiel.swift */,
+				9098E77A1FFD35B20077FAE6 /* CurrencyTextField.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -164,7 +164,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9030D6171FFC251800B96530 /* MainVC.swift in Sources */,
-				9098E77B1FFD35B20077FAE6 /* CurrencyTextFiel.swift in Sources */,
+				9098E77B1FFD35B20077FAE6 /* CurrencyTextField.swift in Sources */,
 				9030D6151FFC251800B96530 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
