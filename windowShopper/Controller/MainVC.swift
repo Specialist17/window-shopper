@@ -11,7 +11,9 @@ import UIKit
 class MainVC: UIViewController {
 
     @IBOutlet weak var wageTxt: CurrencyTextField!
-    @IBOutlet weak var proceTxt: CurrencyTextField!
+    @IBOutlet weak var priceTxt: CurrencyTextField!
+    @IBOutlet weak var resultsLbl: UILabel!
+    @IBOutlet weak var hoursLbl: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         let calcBtn = UIButton(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: 60))
@@ -22,11 +24,21 @@ class MainVC: UIViewController {
         calcBtn.addTarget(self, action: #selector(MainVC.calculate), for: .touchUpInside)
         
         wageTxt.inputAccessoryView = calcBtn
-        proceTxt.inputAccessoryView = calcBtn
+        priceTxt.inputAccessoryView = calcBtn
+        
+        resultsLbl.isHidden = true
+        hoursLbl.isHidden = true
     }
     
     @objc func calculate() {
-        
+        if let wageTxt = wageTxt.text, let priceTxt = priceTxt.text {
+            if let wage = Double(wageTxt), let price = Double(priceTxt) {
+                view.endEditing(true)
+                resultsLbl.isHidden = false
+                hoursLbl.isHidden = false
+                resultsLbl.text = "\(Wage.getHours(forWage: wage, andPrice: price))"
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -34,5 +46,11 @@ class MainVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func clearCalculatorPressed(_ sender: UIButton) {
+        resultsLbl.isHidden = true
+        hoursLbl.isHidden = true
+        wageTxt.text = ""
+        priceTxt.text = ""
+    }
 }
 
